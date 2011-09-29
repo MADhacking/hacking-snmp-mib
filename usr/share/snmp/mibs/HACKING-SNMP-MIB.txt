@@ -1,0 +1,34 @@
+HACKING-SNMP-MIB DEFINITIONS ::= BEGIN
+
+-- imports and exports
+
+IMPORTS
+    OBJECT-TYPE, NOTIFICATION-TYPE, MODULE-IDENTITY,
+    Integer32, Opaque, enterprises, Counter32
+        FROM SNMPv2-SMI
+
+    TEXTUAL-CONVENTION, DisplayString, TruthValue
+        FROM SNMPv2-TC;
+
+hacking MODULE-IDENTITY
+	LAST-UPDATED 	"201109260000Z"
+	ORGANIZATION 	"Hacking Networked Solutions Ltd"
+	CONTACT-INFO	"Max Hacking"
+	DESCRIPTION		"This MIB module forms the base for all Hacking Networked Solutions SNMP MIBs."
+	REVISION     	"201109260000Z"
+	DESCRIPTION		"Created HACKING-SNMP-MIB.  Namespace declaration."
+    ::= { enterprises 38696 }
+
+-- Branches for registering other Hacking Network Solutions MIB modules:
+hackingInternal		OBJECT IDENTIFIER ::= { hacking 1 }
+hackingExperimental	OBJECT IDENTIFIER ::= { hacking 2 }
+hackingStandard		OBJECT IDENTIFIER ::= { hacking 3 }
+
+-- OID values assigned in the hackingExperimental branch:
+-- smartCtlMIB		OBJECT IDENTIFIER ::= { hackingExperimental  1 } - SMARTCTL-MIB
+-- mdRaidMIB		OBJECT IDENTIFIER ::= { hackingExperimental  2 } - MD-RAID-MIB
+-- lvmMIB			OBJECT IDENTIFIER ::= { hackingExperimental  3 } - LVM-MIB
+
+
+
+END
