@@ -11,7 +11,7 @@
             <email>default-package-maintainer@mad-hacking.net</email>
             <name>Default Package Maintainer</name>
         </maintainer>
-        <bugs-to></bugs-to>
-        <doc></doc>
+        <bugs-to>https://github.com/MADhacking/hacking-snmp-mib/issues</bugs-to>
+        <doc>https://github.com/MADhacking/hacking-snmp-mib</doc>
     </upstream>
 </pkgmetadata>
